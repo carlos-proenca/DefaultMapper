@@ -4,15 +4,18 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * The Embedded Mapped Annotation Type
+ * The Embedded Mapped From Annotation Type
  * 
  * @author Carlos Proença (carlos_proenca@live.com)
  *
  */
 @Retention(RetentionPolicy.RUNTIME)
-public @interface EmbeddedMapped {
+public @interface EmbeddedMappedFrom {
 
-	String value() default "";
+	String fieldName() default "";
 
+	String fieldTargetName() default "";
+	
 	boolean isSameClass() default false;
+	
 }
