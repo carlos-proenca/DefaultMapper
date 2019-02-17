@@ -26,10 +26,10 @@ public final class AnnotationUtil {
 		return null;
 	}
 
-	public static TypeElement findEnclosingTypeElement(Element e){
-		while (e != null && !(e instanceof TypeElement)){
-			e = e.getEnclosingElement();
+	public static TypeElement findEnclosingTypeElement(Element element){
+		while (element != null && !(element instanceof TypeElement)){
+			element = element.getEnclosingElement();
 		}
-		return TypeElement.class.cast(e);
+		return TypeElement.class.cast(element);
 	}
 }
